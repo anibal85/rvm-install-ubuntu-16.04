@@ -2,8 +2,6 @@
 
 Instalando RVM y Ruby
 
-gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install 2.2.0
 rvm use 2.2.0 --default
@@ -25,8 +23,26 @@ Primero, use el gpgcomando para ponerse en contacto con un servidor de claves p�
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
+-------------------Instalacion---------------------------
 
-Lo utilizaremos curlpara descargar el script de instalación de RVM. Instalar curlsi no está ya instalado.
-
-sudo apt-get install curl
-
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+ Instalacion de Keys en Linux 
+ 
+ ## Instalar Curl si no esta instalado 
+ 
+ apt-get install curl
+ 
+ \curl -sSL https://get.rvm.io | bash -s stable
+ 
+ # Comando para Listar paquete y ver version de RVM
+ rvm -v
+ rvm list known 
+ 
+  # Instalacion cualquier Version de Ruby
+ rvm install 2.3.4
+ 
+ # Ver paquetes instalados en RVM 
+ rvm list
+ 
+ # Comando para Cambiar de versiones 
+ rvm use version_ruby
